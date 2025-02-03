@@ -1,0 +1,35 @@
+
+-> to build image
+
+docker image build -t  springboot-app .
+
+-> to create container locally
+
+docker container run --name springboot-app -p 8087:8087 -d springboot-app
+
+docker container logs containerid
+
+docker container stop containerid
+docker container start/run containerid
+
+
+docker  ps -a 
+
+
+-> to display logs of container created 
+
+docker container logs springboot-app
+
+docker container logs -f springboot-app
+
+docker container rm name -f     -> to remove container
+
+docker tag  springboot-app  arunajava567/springboot-app:latest
+
+docker push arunajava567/springboot-app:latest
+
+docker pull arunajava567/springboot-app:latest
+
+to run from docker hub
+docker  run  -p 8087:8087 arunajava567/springboot-app:latest
+
